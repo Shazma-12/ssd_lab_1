@@ -8,6 +8,7 @@ This form is developed as part of SSD Lab Task 1. It collects basic student info
 ## 🛠️ Technologies Used
 - HTML
 - CSS
+- JS
 
 ## 🎯 Features
 - Clean and simple UI
