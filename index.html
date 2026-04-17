@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="main-wrapper">
+        <div class="form-container" id="formContainer">
+            <div class="form-header">
+                <h2>Student Registration</h2>
+                <p>Please fill out the form below to join our program.</p>
+            </div>
+
+            <form id="regForm">
+                <div class="row">
+                    <div class="input-group">
+                        <label>First Name</label>
+                        <input type="text" placeholder="John" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Last Name</label>
+                        <input type="text" placeholder="Doe" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-group">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="example@mail.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Contact Number</label>
+                        <input type="tel" placeholder="03XXXXXXXXX" pattern="[0-9]{11}" required title="Enter 11 digit mobile number">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-group">
+                        <label>Date of Birth</label>
+                        <input type="date" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Select Subject</label>
+                        <select required>
+                            <option value="" disabled selected>Choose Subject</option>
+                            <option>Artifical Intelligence</option>
+                            <option>Cyber Security</option>
+                            <option>Machine Learning</option>
+                            <option>Computer Science</option>
+                            <option>Data Science</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Full Address</label>
+                    <textarea rows="3" placeholder="Street, City, Country"></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label>Gender</label>
+                    <div class="radio-group">
+                        <label class="radio-label"><input type="radio" name="gen" value="male"> Male</label>
+                        <label class="radio-label"><input type="radio" name="gen" value="female"> Female</label>
+                        <label class="radio-label"><input type="radio" name="gen" value="other"> Other</label>
+                    </div>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">I agree to the <span>Terms and Conditions</span></label>
+                </div>
+
+                <button type="submit" class="submit-btn">Register Now</button>
+            </form>
+        </div>
+
+        <div class="success-screen hidden" id="successScreen">
+            <div class="icon">✔</div>
+            <h2>Registration Complete!</h2>
+            <p>Your details have been submitted successfully.</p>
+            <button onclick="location.reload()" class="reload-btn">Submit Another</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
